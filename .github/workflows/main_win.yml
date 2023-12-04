@@ -25,12 +25,12 @@ jobs:
       run: i686-w64-mingw32-g++ main.cpp -o my_program.exe
 
     - name: Create README
-      run: echo "# README\nDas ist die Readme zu meinem Programm" > README.md
+      run: echo "# README \r\nDas ist die Readme zu meinem Programm" > README.md
       
     - name: Archive Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: my_program
+        name: my_program_new
         path: |
           ./my_program.exe
           ./README.md
